@@ -1,7 +1,7 @@
 import React from 'react';
 
 function LoginResult({ result }) {
-  const { success, mode, username, query, queryParams, protectedData } = result;
+  const { success, mode, username, query, protectedData } = result;
 
   if (!success) {
     return (
@@ -11,12 +11,6 @@ function LoginResult({ result }) {
         <div className="query-display">
           <h3>SQL upit:</h3>
           <pre>{query}</pre>
-          {queryParams && (
-            <>
-              <h3>Parameters:</h3>
-              <pre>{JSON.stringify(queryParams, null, 2)}</pre>
-            </>
-          )}
         </div>
       </div>
     );
@@ -36,12 +30,6 @@ function LoginResult({ result }) {
       <div className="query-display">
         <h3>Izvršen SQL upit:</h3>
         <pre>{query}</pre>
-        {queryParams && (
-          <>
-            <h3>Parameters:</h3>
-            <pre>{JSON.stringify(queryParams, null, 2)}</pre>
-          </>
-        )}
       </div>
 
       <div className="protected-data">

@@ -9,8 +9,8 @@
   "scripts": {
     "build": "tsc",
     "build:client": "cd client && npm run build",
-    "build:all": "npm run seed && npm run build && npm run build:client",
-    "seed": "node seed_db.ts",
+    "build:all": "npm run build && npm run seed && npm run build:client",
+    "seed": "node dist/seed_db.js",
     "start": "node dist/server.js",
     "dev": "tsc && node dist/server.js",
     "dev:client": "cd client && npm start",

@@ -1,0 +1,30 @@
+{
+  "name": "napweb-lab2",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "build:client": "cd client && npm run build",
+    "build:all": "npm run seed && npm run build && npm run build:client",
+    "seed": "node seed_db.ts",
+    "start": "node dist/server.js",
+    "dev": "tsc && node dist/server.js",
+    "dev:client": "cd client && npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "express": "^5.1.0",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/express": "^5.0.5",
+    "@types/node": "^24.10.0",
+    "typescript": "^5.9.3"
+  }
+}
